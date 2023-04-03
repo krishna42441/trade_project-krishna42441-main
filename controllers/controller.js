@@ -1,5 +1,5 @@
-const model = require('../models/data.js');
-
+const model = require('../models/data.js'); 
+//
 exports.index = (req, res) => {
     res.render('index', { root: __dirname });
 };
@@ -9,8 +9,8 @@ exports.new = (req, res) => {
 };
 
 exports.postNew = (req, res ,next) => {
-    let trade = new model(req.body);
-    trade.save()
+    let item = new model(req.body);
+    item.save()
         .then(trade => res.redirect("/trades"))
         .catch(err => {
             if (err.name === "ValidationError") {
@@ -33,11 +33,11 @@ exports.trades = (req, res) => {
         .then(trades => {
             var mobiles = [];
             var accessories = [];
-            trades.forEach(trade => {
-                if (trade.topic === "mobiles")
-                    mobiles.push(trade);
-                else if (trade.topic === "accessories") 
-                accessories.push(trade);
+            trades.forEach(item => {
+                if (item.topic === "mobiles")
+                    mobiles.push(item);
+                else if (item.topic === "accessories") 
+                accessories.push(item);
             });
             res.render('trades', {mobiles: mobiles, accessories: accessories});
         })
@@ -53,9 +53,9 @@ exports.showTrade = (req, res, next) => {
     }
     
     model.findById(id)
-        .then(trade => {
-            if (trade) {
-                return res.render("trade", {trade});
+        .then(item => {
+            if (item) {
+                return res.render("trade", {trade: item});
             } else {
                 let err = new Error("Cannot find a trade with id: " + id);
                 err.status = 404;
@@ -74,9 +74,9 @@ exports.edit = (req, res, next) => {
     }
     
     model.findById(id)
-        .then(trade => {
-            if (trade) {
-                return res.render("edit", {trade: trade});
+        .then(item => {
+            if (item) {
+                return res.render("edit", {trade: item});
             } else {
                 let err = new Error("Cannot find a trade with id: " + id);
                 err.status = 404;
@@ -97,8 +97,8 @@ exports.saveEdit = (req, res, next) => {
     }
     
     model.findByIdAndUpdate(id, data, {useFindAndModify: false, runValidators: true})
-        .then(trade => {
-            if (trade) {
+        .then(item => {
+            if (item) {
                 res.redirect('/trade/' + id);
             } else {
                 let err = new Error('Cannot find a trade with id ' + id);
@@ -123,8 +123,8 @@ exports.delete = (req, res, next) => {
     }
     
     model.findByIdAndDelete(id, {useFindAndModify: false})
-        .then(trade => {
-            if (trade) {
+        .then(item => {
+            if (item) {
                 res.redirect('/trades');
             } else {
                 let err = new Error('Cannot find a connection with id ' + id);

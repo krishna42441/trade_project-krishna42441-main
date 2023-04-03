@@ -1,4 +1,4 @@
-
+//
 // rewuired modules 
 const express = require('express');
 const morgan = require('morgan');
@@ -6,6 +6,8 @@ const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const router = require("./routes/router.js");
 
+const multer = require('multer');
+ 
 // create app 
 const app = express();
 // configure app
