@@ -1,0 +1,63 @@
+<%- include('./partials/header.ejs')%>
+  
+  
+</div>
+    <main class="form">
+        
+            <div class="container">
+                <div class="title">Start New Trade</div>
+                <a>-------------------------</a>
+                <form action= "/newTrade" method="POST">
+                    <div class="Category">
+                        <!--
+                        <div class="input-box"> 
+                            <span class="details" >Category </span>
+                            <input type="text" placeholder="category" name="topic">
+                        </div>-->
+                        <select name="topic">
+                            <option value="mobiles">mobiles</option>
+                            <option value="Accessories">Accessories</option>
+                          </select>
+                    </div>
+                    <a>-------------------------</a>
+                    <div class="Brand">
+                        <div class="input-box"> 
+                            <span class="details" >brand </span>
+                            <input type="text" placeholder="brand" name="title">
+                        </div>
+                    </div>
+                    <a>-------------------------</a>
+                    <div class="BrandCondition">
+                        <div class="radioButton"> 
+                            <p> Product condition</p>
+                            <input type="checkbox" id="Newest" name="condition" value="Newest">
+                            <label for="Newest">Newest</label>
+                            <input type="checkbox" id="Trending" name="condition" value="Trending">
+                            <label for="Trending">trending</label>
+                            <input type="checkbox" id="Best_rated" name="condition" value="Best rated">
+                            <label for="Best_rated">Best rated</label><br>
+                        </div>
+                    </div>
+                    <a>-------------------------</a>
+                    <div class="Details">
+                        <div class="input-box"> 
+                            <span class="details" >Details</span>
+                            <input type="text" placeholder="description" name="details">
+                        </div>
+                    </div>
+                    <a>-------------------------</a>
+        
+                    <div class = "button" >
+                        <input class="CreateButton" type="submit" value="Create Trade" id="submit_btn">
+                    </div>
+                </form>
+                
+            </div>
+        
+    </main>
+    <div id="page-container">
+        <div id="content-wrap">
+          <!-- all other page content -->
+          </div>
+    </div>
+<%- include('./partials/footer.ejs')%>

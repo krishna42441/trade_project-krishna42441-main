@@ -1,0 +1,25 @@
+<%- include('./partials/header.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+</div>
+<main>
+    <div id="top_box">
+        <h1><%=trade.title%></h1>
+        <br>
+        <img src="<%=trade.image%>" alt="Image">
+    </div>
+    <div>
+        <h4>Details</h4>
+        <p><%=trade.details%></p>
+    </div>
+    <form>
+        <button type="submit" formmethod="GET" formaction="/trade/<%=trade.id%>/edit">Edit</button>
+        <button type="submit" formmethod="POST" formaction="/trade/<%=trade.id%>?_method=DELETE">Delete</button>
+</main>
+    <div id="page-container">
+        <div id="content-wrap">
+          <!-- all other page content -->
+    </div>
+    <%- include('./partials/footer.ejs')%>

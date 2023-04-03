@@ -1,0 +1,56 @@
+<%- include('./partials/header.ejs')%>
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+</div>
+    <main>
+        <article>
+            <h2>Samsung s22 Ultra</h2>
+
+            <div class="Tradecard">
+                <div class="title">Edit Trade</div>
+        <form action="/trade/<%=trade.id%>/edit" method="POST">
+            <div class="Category">
+                <select name="topic">
+                    <option value="mobiles">mobiles</option>
+                    <option value="Accessories">Accessories</option>
+                  </select>
+            </div>
+            <div class="Brand">
+                <div class="input-box"> 
+                    <span class="details" >brand </span>
+                    <input type="text" value="<%=trade.title%>" name="title">
+                </div>
+            </div>
+
+            <div class="BrandCondition">
+                <div class="radioButton"> 
+                    <p> Product condition</p>
+                    <input type="checkbox" id="Newest" name="condition" value="Newest">
+                    <label for="New">Newest</label>
+                    <input type="checkbox" id="Trending" name="condition" value="Trending">
+                    <label for="New">trending</label>
+                    <input type="checkbox" id="Best rated " name="condition" value="Best rated">
+                    <label for="New">Best rated</label><br>
+                </div>
+            </div>
+            <div class="Details">
+                <div class="input-box"> 
+                    <span class="details" >Details</span>
+                    <input type="text" value="<%=trade.details%>" name="details">
+                </div>
+            </div>
+            
+
+            <div class = "button" >
+                <input class="CreateButton" type="submit" value="Edit Trade" id="submit_btn">
+            </div>
+        </form>
+        </article>
+    </main>
+    <div id="page-container">
+        <div id="content-wrap">
+          <!-- all other page content -->
+    </div>
+    <%- include('./partials/footer.ejs')%>
