@@ -6,7 +6,6 @@ const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const router = require("./routes/router.js");
 
-const multer = require('multer');
  
 // create app 
 const app = express();
@@ -18,7 +17,7 @@ app.set('view engine','ejs');
 // mount middlware 
 
 //connecting to MongoDB database
-mongoose.connect('mongodb://127.0.0.1:27017/stories', {useNewUrlParser:true, useUnifiedTopology:true})
+mongoose.connect('mongodb://127.0.0.1/trades', {useNewUrlParser:true, useUnifiedTopology:true})
 .then(()=>{
     //starting the server
     app.listen(port, host, () => {
@@ -55,3 +54,4 @@ app.use((err, req, res, next)=> {
 
 
 
+  

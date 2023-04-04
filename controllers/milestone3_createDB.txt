@@ -1,0 +1,54 @@
+
+use trades
+db.trades.drop()
+
+db.trades.insertMany([
+        {
+        id: '1',
+        topic: 'mobiles',
+        title: 'samsung s22 ultra',
+        details: "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+        image: "https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?wid=700&hei=700&fmt=webp"
+    },
+    {
+        id: '2',
+        topic: 'mobiles',
+        title: 'google pixel 7 pro',
+        details: "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic Island ",
+        image: "https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?wid=700&hei=700&fmt=webp"
+    },
+    {
+        id: '3',
+        topic: 'mobiles',
+        title: 'iphone 14 pro',
+        details: "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+        image: "https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?wid=700&hei=700&fmt=webp"
+    },
+    {
+        id: '4',
+        topic: 'Accessories',
+        title: 'charger',
+        details: "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+        image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MNWM3?wid=532&hei=582&fmt=png-alpha&.v=1652736144126"
+    },
+    {
+        id: '5',
+        topic: 'Accessories',
+        title: 'cable',
+        details: "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+        image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MNWM3?wid=532&hei=582&fmt=png-alpha&.v=1652736144126"
+    },
+    {
+        id: '6',
+        topic: 'Accessories',
+        title: 'case', 
+        details: "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+        image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MNWM3?wid=532&hei=582&fmt=png-alpha&.v=1652736144126"
+    }
+])
+
+
+
+
+
+db.stories.deleteMany({})
