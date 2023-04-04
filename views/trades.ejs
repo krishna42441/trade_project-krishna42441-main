@@ -4,7 +4,7 @@
   
 <main>
   <div class="category_box">
-      <h3>mobiles</h3>
+      <h3>Mobiles</h3>
       <%if (mobiles.length == 0) {%>
           <p>There are no development connections.</p>
       <%} else {%>
@@ -21,11 +21,12 @@
       <%}%>
   </div>
   <div class="category_box">
-      <h3></h3>
+      <h2>Accessories</h2>
       <%if (accessories.length == 0) {%>
           <p>There are no system administration connections.</p>
       <%} else {%>
         <%accessories.forEach(trade => {%>
+          <a>--------------</a>
         <div class="card">
           <img src="<%=trade.image%>" alt="<%=trade.title%>" class ="cardimg">
           <p><%=trade.title%></p>
