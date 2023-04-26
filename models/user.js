@@ -17,9 +17,9 @@ userSchema.pre("save", function(next) {
         return next();
     }
     
-    // TODO: Check email
+  
     
-    // Save password
+
     bcrypt.hash(this.password, 10)
         .then(hash => {
             this.password = hash;
