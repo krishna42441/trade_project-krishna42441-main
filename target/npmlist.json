@@ -1,0 +1,1 @@
+{"version":"1.0.0","name":"nbad-milestone2","dependencies":{"ejs":{"version":"3.1.8"},"express":{"version":"4.18.2"},"luxon":{"version":"3.3.0"},"method-override":{"version":"3.0.0"},"mongoose-morgan":{"version":"1.0.17"},"mongoose":{"version":"7.0.3"},"multer":{"version":"1.4.5-lts.1"},"uuid":{"version":"9.0.0"}}}

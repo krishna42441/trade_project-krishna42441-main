@@ -1,0 +1,34 @@
+<%- include('../partials/header.ejs')%>
+
+<main class="form">
+
+    <h2>Welcome <%=user.firstName%> <%=user.lastName%>!!</h2>
+    <p>
+        <b>Email:</b> <%=user.email%>
+        <br />
+    </p>    
+    <br /><br />
+        
+    <div class="container">
+        <div class="title">Your Trades </div>
+        <div class="category_box">
+            <h3><%=user.firstName%>'s trades:</h3>
+            <%if (trades.length == 0) {%>
+                <p>You have no trades!</p>
+            <%} else {%>
+            <ul>
+                <%trades.forEach(trade => {%>
+                <li><a href="/trade/<%=trade.id%>"><%=trade.title%></a></li>
+                <%});%>
+            </ul>
+            <%}%>
+        </div>
+    </div>
+        </form>
+        
+    </div>
+
+</main>
+<%- include('../partials/footer.ejs')%>
+
+

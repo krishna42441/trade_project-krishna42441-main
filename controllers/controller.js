@@ -10,6 +10,7 @@ exports.new = (req, res) => {
 
 exports.postNew = (req, res ,next) => {
     let item = new model(req.body);
+    item.user_id = req.session.user;
     item.save()
         .then(trade => res.redirect("/trades"))
         .catch(err => {
@@ -46,6 +47,7 @@ exports.trades = (req, res) => {
 
 exports.showTrade = (req, res, next) => {
     let id = req.params.sid;
+    let user_id = req.session.user;
     if (!id.match(/^[0-9a-fA-F]{24}$/)) {
         let err = new Error("Cannot find trade with id: " + id);
         err.status = 404;
@@ -67,6 +69,7 @@ exports.showTrade = (req, res, next) => {
 
 exports.edit = (req, res, next) => {
     let id = req.params.sid;
+    let user_id = req.session.user;
     if (!id.match(/^[0-9a-fA-F]{24}$/)) {
         let err = new Error("Cannot find connection with trade: " + trade);
         err.status = 404;
@@ -76,9 +79,14 @@ exports.edit = (req, res, next) => {
     model.findById(id)
         .then(item => {
             if (item) {
+                if (user_id != trades.user_id) {
+                    let err = new Error("Unable to edit: Invalid user.");
+                    err.status = 401;
+                    next(err);
+                }
                 return res.render("edit", {trade: item});
             } else {
-                let err = new Error("Cannot find a trade with id: " + id);
+                let err = new Error("Caxnnot find a trade with id: " + id);
                 err.status = 404;
                 next(err);
             }

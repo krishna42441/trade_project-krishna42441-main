@@ -1,10 +1,17 @@
 //
 // rewuired modules 
 const express = require('express');
+const { v4: uuidv4 } = require('uuid');
 const morgan = require('morgan');
-const methodOverride = require('method-override');
-const mongoose = require('mongoose');
+const ejs = require('ejs');
+const methodOverride = require("method-override");
+const mongoose = require("mongoose");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+const flash = require("connect-flash");
 const router = require("./routes/router.js");
+
+const userrouter = require("./routes/userrouter.js");   
 
  
 // create app 
@@ -32,7 +39,29 @@ app.use(methodOverride('_method'));
 // set up routes 
 //app.use('/', mainRoutes); // home page, sign in and sign up
 
+// Sessions
+app.use(session({
+    secret: "89df98q2389",      // TODO: Can't remember where this came from
+    resave: false,
+    saveUninitialized: true,
+    cookie: {maxAge: 60*60*1000},
+    store: new MongoStore({
+        mongoUrl: "mongodb://127.0.0.1/demos"       // TODO: Maybe change "demos"
+    })
+}));
+
+// Flash messages
+app.use(flash());
+app.use((req, res, next) => {
+    res.locals.user = req.session.user || null;
+    res.locals.successMessages = req.flash("success");
+    res.locals.errorMessages = req.flash("error");
+    next();
+});
+
+
 app.use('/', router); 
+app.use("/users", userrouter);
 
 
 app.use((req, res, next) => {
