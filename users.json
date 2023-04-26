@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "644888bf989c3bdcac408f43"
+  },
+  "firstName": "sai",
+  "lastName": "krishna",
+  "email": "sveerama@uncc.edu",
+  "password": "$2b$10$B0mirzbtutqASlngxjY3H.AZUkSF6YfllDh0jq9CJl4sJg57U0ZWC",
+  "createdAt": {
+    "$date": "2023-04-26T02:13:19.865Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-26T02:13:19.865Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64488905989c3bdcac408f4e"
+  },
+  "firstName": "mike",
+  "lastName": "tison",
+  "email": "mike@gmail.com",
+  "password": "$2b$10$HdXPDIcb8tOvrEBxvbqAIePLwVFrlX6rVZvfQYWK6yTBj8sDUzAEu",
+  "createdAt": {
+    "$date": "2023-04-26T02:14:29.358Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-26T02:14:29.358Z"
+  },
+  "__v": 0
+}]

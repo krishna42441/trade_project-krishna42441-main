@@ -79,8 +79,8 @@ exports.edit = (req, res, next) => {
     model.findById(id)
         .then(item => {
             if (item) {
-                if (user_id != trades.user_id) {
-                    let err = new Error("Unable to edit: Invalid user.");
+                if (user_id != item.user_id) {
+                    let err = new Error("you dont have autherization to access this trade");
                     err.status = 401;
                     next(err);
                 }

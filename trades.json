@@ -1,0 +1,113 @@
+[{
+  "_id": {
+    "$oid": "642b97d91818ab41b0963965"
+  },
+  "id": "1",
+  "topic": "mobiles",
+  "title": "samsung s22 ultra",
+  "details": "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+  "image": "https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?wid=700&hei=700&fmt=webp"
+},{
+  "_id": {
+    "$oid": "642b97d91818ab41b0963966"
+  },
+  "id": "2",
+  "topic": "mobiles",
+  "title": "google pixel 7 pro",
+  "details": "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic Island ",
+  "image": "https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?wid=700&hei=700&fmt=webp"
+},{
+  "_id": {
+    "$oid": "642b97d91818ab41b0963967"
+  },
+  "id": "3",
+  "topic": "mobiles",
+  "title": "iphone 14 pro",
+  "details": "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+  "image": "https://ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?wid=700&hei=700&fmt=webp"
+},{
+  "_id": {
+    "$oid": "642b97d91818ab41b096396a"
+  },
+  "id": "6",
+  "topic": "accessories",
+  "title": "case",
+  "details": "iPhone 14 Pro. Capture incredible detail with a 48MP Main camera. Experience iPhone in a whole new way with Dynamic ",
+  "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MNWM3?wid=532&hei=582&fmt=png-alpha&.v=1652736144126"
+},{
+  "_id": {
+    "$oid": "6448738ee8905f61f8c246a0"
+  },
+  "topic": "mobiles",
+  "title": "asus",
+  "details": "good with festures..",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64487454e8905f61f8c246b3"
+  },
+  "topic": "Accessories",
+  "title": "aergfgkrmegklmeqq",
+  "details": "erlkgmkermgm gs4jktngfer",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64487493e8905f61f8c246b6"
+  },
+  "topic": "Accessories",
+  "title": "papaya",
+  "details": "very good phone buy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6448751e13799047efdeb1fe"
+  },
+  "topic": "accessories",
+  "title": "apple case",
+  "details": "very good phone buy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "644877d76d43249193fbedb6"
+  },
+  "topic": "mobiles",
+  "title": "lenovo",
+  "details": "sdgfhghkgjfhdgsfdassadasfdgf",
+  "createdAt": {
+    "$date": "2023-04-26T01:01:11.837Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-26T01:01:11.837Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "644888d6989c3bdcac408f49"
+  },
+  "topic": "mobiles",
+  "title": "apple",
+  "details": "a12 bionic good condition",
+  "user_id": "644888bf989c3bdcac408f43",
+  "createdAt": {
+    "$date": "2023-04-26T02:13:42.420Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-26T02:13:42.420Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6448892a989c3bdcac408f54"
+  },
+  "topic": "mobiles",
+  "title": "samsung",
+  "details": "trending s23 ultra mobile for good price",
+  "user_id": "64488905989c3bdcac408f4e",
+  "createdAt": {
+    "$date": "2023-04-26T02:15:06.526Z"
+  },
+  "updatedAt": {
+    "$date": "2023-04-26T02:15:06.526Z"
+  },
+  "__v": 0
+}]
