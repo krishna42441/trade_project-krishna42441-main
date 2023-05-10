@@ -9,7 +9,11 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
+
+
 const router = require("./routes/router.js");
+
+const traderouter = require("./routes/traderouter.js")
 
 const userrouter = require("./routes/userrouter.js");   
 
@@ -60,7 +64,8 @@ app.use((req, res, next) => {
 });
 
 
-app.use('/', router); 
+app.use('/', router);
+app.use('/trade', traderouter);
 app.use("/users", userrouter);
 
 

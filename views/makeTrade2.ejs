@@ -1,0 +1,50 @@
+<%- include('./partials/header.ejs')%>
+
+<main class="form">
+
+    <form action="/trade/makeTrade" method="POST">
+        <!-- User chooses the item they want to trade for -->
+        <div>
+            <span class="details">I want to trade:</span>
+            <select name="user_trade_id">
+                <%trades.forEach(trade => {%>
+                <%if (trade.user_id == user_id) {%>
+                <option value="<%=trade.id%>"><%=trade.title%></option>
+                <%}%>
+                <%});%>
+            </select>
+        </div>
+        
+        <!-- User chooses which item they will offer -->
+        <div>
+            <%if (receiver_trade_id != 0) {%>
+                <input type="hidden" name="receiver_trade_id" value="<%=receiver_trade_id%>">
+                <%trades.forEach(trade => {%>
+                    <%if (trade.id == receiver_trade_id) {%>
+                        <span class="details">For: <%=trade.title%></span>
+                    <%}%>
+                <%});%>
+            <%} else {%>
+            <span class="details">For:</span>
+            <select name="receiver_trade_id">
+                <%trades.forEach(trade => {%>
+                    <%if (trade.user_id == receiver_id) {%>
+                        <option value="<%=trade.id%>"><%=trade.title%></option>
+                    <%}%>
+                <%});%>
+            </select>
+            <%}%>
+        </div>
+        
+        <!-- Hidden forms to hold the user ID's -->
+        <input type="hidden" name="user_id" value="<%=user_id%>">
+        <input type="hidden" name="receiver_id" value="<%=receiver_id%>">
+        
+        <div>
+            <input type="submit" value="Submit Trade">
+        </div>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')%>

@@ -9,7 +9,6 @@
           <p>There are no development connections.</p>
       <%} else {%>
         <%mobiles.forEach(trade => {%>
-        <a>--------------<a>
         <div class="card">
           <img src="<%=trade.image%>" alt="<%=trade.title%>" class ="cardimg">
           <p><%=trade.title%></p>
@@ -26,7 +25,6 @@
           <p>There are no system administration connections.</p>
       <%} else {%>
         <%accessories.forEach(trade => {%>
-          <a>--------------</a>
         <div class="card">
           <img src="<%=trade.image%>" alt="<%=trade.title%>" class ="cardimg">
           <p><%=trade.title%></p>

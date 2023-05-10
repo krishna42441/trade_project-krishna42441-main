@@ -1,0 +1,23 @@
+
+
+
+<%- include('./partials/header.ejs')%>
+
+<main class="form">
+        
+    <div class="container">
+        <div class="title">Choose with whom you want to trade </div>
+        <div class="category_box">
+            <ul>
+                <%users.forEach(user => {%>
+                    <li><a href="/trade/make/<%=user.id%>/<%=trade_id%>"><%=user.email%></a></li>
+                <%});%>
+            </ul>
+        </div>
+
+        </form>
+        
+    </div>
+
+</main>
+<%- include('./partials/footer.ejs')%>

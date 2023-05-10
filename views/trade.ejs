@@ -15,8 +15,18 @@
         <p><%=trade.details%></p>
     </div>
     <form>
+        <% if (is_owner) { %>
         <button type="submit" formmethod="GET" formaction="/trade/<%=trade.id%>/edit">Edit</button>
         <button type="submit" formmethod="POST" formaction="/trade/<%=trade.id%>?_method=DELETE">Delete</button>
+        <% } else { %>
+            <% if (is_watch == false) {%>
+                <button type="submit" formmethod="POST" formaction="/trade/<%=trade.id%>/watch">Watch</button>
+                <% } %>
+
+                <button type="submit" formmethod="GET" formaction="/makeTrade/<%=trade.id%>">Tradeitem</button>
+            <% } %>
+
+            
 </main>
     <div id="page-container">
         <div id="content-wrap">

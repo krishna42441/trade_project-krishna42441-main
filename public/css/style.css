@@ -265,7 +265,7 @@ form .BrandPrice .input-box{
     text-align: center;
     background-color: #ffffff;
     width: 300px;
-    background-image: url("https://media.istockphoto.com/id/1234522036/vector/recycle-bin.jpg?s=170667a&w=0&k=20&c=MKbDthd7IUdKWY0T2hTe8E8CqN6-77S05B1UbDLfa6o=");
+    
   }
 
 .row .button{
@@ -351,6 +351,16 @@ form .BrandPrice .input-box{
     height: 50px;
     width: 50px;
 
+}
+
+.category_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 0 0 20%; /* Adjust the width of the card to fit your design */
+  margin: 10px; /* Adjust the margin to create spacing between the cards */
 }
 
 

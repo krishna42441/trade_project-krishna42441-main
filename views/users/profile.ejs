@@ -23,6 +23,97 @@
             </ul>
             <%}%>
         </div>
+
+        <div>
+            <h3>Pending Offers</h3>
+            <table>
+                <%sends.forEach(send => {%>
+                <%if (send.receiver_id == user.id) { %>
+                <tr>
+                    <%all_trades.forEach(trade => {%>
+                    <%if (trade.id == send.user_trade_id) {%>
+                        <td><b><%=trade.title%></b></td>
+                    <%}%>
+                    <%});%>
+                    
+                        <td>for</td>
+                        
+                    <%all_trades.forEach(trade => {%>
+                    <%if (trade.id == send.receiver_trade_id) {%>
+                        <td><b><%=trade.title%></b></td>
+                    <%}%>
+                    <%});%>
+                    
+                        <td>
+                        <form action="/trade/refuse" method="POST">
+                            <input type="hidden" name="send_id" value="<%=send.id%>">
+                            <input type="hidden" name="user_id" value="<%=send.user_id%>">
+                            <input type="hidden" name="user_trade_id" value="<%=send.user_trade_id%>">
+                            <input type="hidden" name="receiver_id" value="<%=send.receiver_id%>">
+                            <input type="hidden" name="receiver_trade_id" value="<%=send.receiver_trade_id%>">
+                            <input type="submit" value="Refuse">
+                        </form>
+                        </td>
+                        <td>
+                        <form action="/trade/accept" method="POST">
+                            <input type="hidden" name="send_id" value="<%=send.id%>">
+                            <input type="hidden" name="user_id" value="<%=send.user_id%>">
+                            <input type="hidden" name="user_trade_id" value="<%=send.user_trade_id%>">
+                            <input type="hidden" name="receiver_id" value="<%=send.receiver_id%>">
+                            <input type="hidden" name="receiver_trade_id" value="<%=send.receiver_trade_id%>">
+                            <input type="submit" value="Accept">
+                        </form>
+                        </td>
+                </tr>
+                <%} else if (send.user_id == user.id) {%>
+                    <tr>
+                        <%all_trades.forEach(trade => {%>
+                            <%if (trade.id == send.user_trade_id) {%>
+                                <td><b><%=trade.title%></b></td>
+                            <%}%>
+                            <%});%>
+                            
+                            <td>
+                            <form action="/trade/refuse" method="POST">
+                                <input type="hidden" name="send_id" value="<%=send.id%>">
+                                <input type="hidden" name="user_id" value="<%=send.user_id%>">
+                                <input type="hidden" name="user_trade_id" value="<%=send.user_trade_id%>">
+                                <input type="hidden" name="receiver_id" value="<%=send.receiver_id%>">
+                                <input type="hidden" name="receiver_trade_id" value="<%=send.receiver_trade_id%>">
+                                <input type="submit" value="Cancel">
+                            </form>
+                            </td>
+                        </tr>
+                <%}%>
+                <%});%>
+            </table>
+        </div>
+
+        <div>
+            <h3>Your Watchlist</h3>
+            
+            <table>
+                <%watches.forEach(watch => {%>
+                <%if (watch.user_id == user.id) {%>
+                    <%all_trades.forEach(trade => {%>
+                    <%if (trade.id == watch.trade_id) {%>
+                        <tr>
+                            <td><%=trade.title%></td>
+                            
+                            <td></td><td></td>
+                            
+                            <td>
+                            <form action="/trade/<%=watch.id%>/rmwatch" method="POST">
+                                <input type="submit" value="Remove">
+                            </form>
+                            </td>
+                        </tr>
+                    <%}%>
+                    <%});%>
+                <%}%>
+                <%});%>
+            </table>
+        </div>
     </div>
         </form>
         
