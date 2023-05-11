@@ -110,4 +110,34 @@
     "$date": "2023-04-26T02:15:06.526Z"
   },
   "__v": 0
+},{
+  "_id": {
+    "$oid": "645a6d20eacbeb0a3cb2325f"
+  },
+  "topic": "mobiles",
+  "title": "pixel 7 pro",
+  "details": "good camera great spped",
+  "user_id": "645a86b015562c671789b5f5",
+  "createdAt": {
+    "$date": "2023-05-09T15:56:16.582Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-09T17:46:35.179Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a86c715562c671789b5f8"
+  },
+  "topic": "accessories",
+  "title": "apple pencil",
+  "details": "very good buy",
+  "user_id": "645a6ceeeacbeb0a3cb23253",
+  "createdAt": {
+    "$date": "2023-05-09T17:45:43.119Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-09T17:46:35.185Z"
+  },
+  "__v": 0
 }]

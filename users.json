@@ -28,4 +28,49 @@
     "$date": "2023-04-26T02:14:29.358Z"
   },
   "__v": 0
+},{
+  "_id": {
+    "$oid": "6459ce5257c603c4eafd84b2"
+  },
+  "firstName": "sai krishna",
+  "lastName": "veeramaneni",
+  "email": "sveerama@yahoo.com",
+  "password": "$2b$10$nhIJuammgQs1kWGV6JPijeYnSV.R/8PLmbzJ.hJZV/G19OL.heUq.",
+  "createdAt": {
+    "$date": "2023-05-09T04:38:42.984Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-09T04:38:42.984Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a6ceeeacbeb0a3cb23253"
+  },
+  "firstName": "apple",
+  "lastName": "banana",
+  "email": "banana@apple.com",
+  "password": "$2b$10$/LXhodhZm7AnyDAIHt2WTONgGJKcuE2YAiKpdyGbLar2PgMlNKA.K",
+  "createdAt": {
+    "$date": "2023-05-09T15:55:26.069Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-09T15:55:26.069Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645a86b015562c671789b5f5"
+  },
+  "firstName": "samosa ",
+  "lastName": "samosa",
+  "email": "samosa@vada1",
+  "password": "$2b$10$IXpDxFB.0rUO4f44nPh/su9cofdTUZuZxQogk3b4WNmkOKHqtVQIG",
+  "createdAt": {
+    "$date": "2023-05-09T17:45:20.017Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-09T17:45:20.017Z"
+  },
+  "__v": 0
 }]
